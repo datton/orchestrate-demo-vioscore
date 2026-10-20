@@ -1,41 +1,47 @@
-/* Design tokens for VioScore. Professional fintech look: cool paper, deep navy ink,
-   trustworthy blue links, teal accent, violet used only in art.
-   Contrast (WCAG AA) on --color-bg: text 16.4, muted 6.7, link 6.3, accent 5.8; all also pass on --color-surface.
-   Type: system sans throughout (crisp, neutral); Georgia is not used here. */
+/* Design tokens for VioScore, "Clear Sky": an airy light base with one confident indigo accent.
+   Mint and coral appear only in the SVG art. Header is light (no navy, no gold).
+   Contrast (WCAG AA) on --color-bg: text 17.1, muted 7.1, link/accent 7.1, link hover 11.2;
+   white on accent 7.4; muted on --color-surface 6.5; header hover/focus 10.2 on the header.
+   Type: system sans throughout; bold, tight, fluid headings, tabular figures for numbers. */
 :root {
-  --color-bg: #f7f9fb;
-  --color-surface: #e9eff5;
-  --color-text: #0f1b2d;
-  --color-muted: #4a5a6f;
-  --color-link: #0b5cad;
-  --color-link-hover: #07427c;
-  --color-accent: #0a6e63;
-  --color-accent-strong: #5fd4c0;
-  --color-border: #cdd8e3;
-  --color-header-bg: #0b1f3a;
-  --color-header-text: #f7f9fb;
-  --color-focus: #0b5cad;
-  --color-violet: #5b3fd1;
+  --color-bg: #fbfaf8;
+  --color-surface: #f0eefb;
+  --color-text: #16152b;
+  --color-muted: #55536b;
+  --color-link: #4b3bd1;
+  --color-link-hover: #32258f;
+  --color-accent: #4b3bd1;
+  --color-accent-strong: #32258f;
+  --color-border: #d9d5ee;
+  --color-header-bg: #f0eefb;
+  --color-header-text: #16152b;
+  --color-focus: #4b3bd1;
+  --color-mint: #9be8cf;
+  --color-coral: #ff9d7a;
+  --color-violet: #4b3bd1;
 
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-heading: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
 
-  /* type scale, ratio ~1.25 */
+  /* type scale, ratio ~1.25; headings are bold with tight tracking */
   --text-sm: 0.875rem;
   --text-base: 1.0625rem;
   --text-lg: 1.25rem;
   --text-xl: 1.5625rem;
-  --text-2xl: 1.953rem;
-  --text-3xl: 2.441rem;
+  --text-2xl: clamp(1.75rem, 4vw, 2.25rem);
+  --text-3xl: clamp(2.25rem, 6vw, 3.25rem);
   --leading-body: 1.65;
-  --leading-heading: 1.2;
+  --leading-heading: 1.12;
+  --heading-weight: 700;
+  --heading-tracking: -0.02em;
+  --numeric: tabular-nums;
 
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 2rem;
   --space-4: 3rem;
   --measure: 65ch;
-  --radius: 8px;
+  --radius: 14px;
   --rule: 1px solid var(--color-border);
 }
