@@ -25,7 +25,40 @@
   </header>
   <main id="main">
     <h1>How it works</h1>
-    <!-- CONTENT: Full-Stack fills this in. Use h2/h3 in order, text only. -->
+    <p>This page explains the idea in general terms. The example is deliberately simple, and the data it uses is synthetic. It is not a validated model.</p>
+    <h2>What alternative data is</h2>
+    <p>Alternative data is information used in assessing credit that does not come from conventional credit reports. Examples of the kinds of records people discuss include:</p>
+    <ul>
+      <li>Rent payments: whether rent was paid on time each month.</li>
+      <li>Utility payments: electricity, gas, water or phone bills paid on time.</li>
+      <li>Subscription payments: whether recurring payments succeeded or failed.</li>
+    </ul>
+    <p>The common thread is regular, repeated payments, where a pattern of on-time behaviour can be observed over a number of months.</p>
+    <h2>From data to score: the steps</h2>
+    <ol>
+      <li><strong>Consent.</strong> The person agrees to the use of the data, and understands what is collected and why.</li>
+      <li><strong>Collect.</strong> Payment records are gathered from the relevant sources, for a defined period such as the last 12 months.</li>
+      <li><strong>Prepare.</strong> The records are checked and tidied, for example by removing duplicates and handling missing months.</li>
+      <li><strong>Turn into features.</strong> Records become simple measures, such as the number of months rent was paid on time.</li>
+      <li><strong>Score.</strong> The features are combined by a defined rule or model into a score.</li>
+      <li><strong>Band.</strong> The score is placed in a band, for example higher, medium or lower.</li>
+      <li><strong>Review.</strong> A person reviews the result, especially for borderline or unusual cases.</li>
+    </ol>
+    <h2>A simple worked example</h2>
+    <p>The <a href="datasets.html">Datasets</a> page uses a toy rule, invented for this illustration: start at 500 points, add 10 points for each month of rent paid on time, add 5 points for each month of utilities paid on time, and subtract 8 points for each failed subscription payment. The rule is not based on real evidence and is not recommended for use.</p>
+    <h2>Limits and cautions</h2>
+    <h3>Fairness</h3>
+    <p>A model can treat groups differently even if it never uses sensitive characteristics directly, because other data can act as a stand-in for them. Any real use would need testing for unequal outcomes across groups, and ongoing monitoring.</p>
+    <h3>Privacy and consent</h3>
+    <p>Payment records are personal data. Good practice is to collect only what is needed, to explain its use, to keep it secure, and to let people withdraw consent.</p>
+    <h3>Thin and uneven data</h3>
+    <p>Not everyone has rent or subscription records, and records may be incomplete or wrong. A missing record should not be treated as the same as a missed payment.</p>
+    <h3>Explainability</h3>
+    <p>People affected by a decision should be able to understand the main reasons for it, and to correct mistakes in their data.</p>
+    <h2>Human review</h2>
+    <p>A score should support a decision, not make it alone. Borderline cases, data problems and unusual circumstances call for review by a trained person, who can look at the context a score cannot see.</p>
+    <h2>Status of this material</h2>
+    <p>VioScore is illustrative. It has not been validated, is not regulated or approved, and should not be relied on for any real decision.</p>
   </main>
   <footer class="site-footer">
     <p>VioScore. Illustrative and synthetic. Not a validated or regulated scoring product.</p>
