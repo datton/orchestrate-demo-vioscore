@@ -23,6 +23,9 @@ main { max-width: 60rem; margin: 0 auto; padding: var(--space-3) var(--space-2);
 .site-nav a[aria-current="page"] { border-bottom-color: var(--color-accent-strong, #ffd166); }
 
 main p, main li { max-width: var(--measure); }
+main img { display: block; max-width: 100%; height: auto; }
+main figure { margin: var(--space-3) 0; }
+main figcaption { margin-top: var(--space-1); font-size: 0.95rem; color: var(--color-muted, #4a5a6f); max-width: var(--measure); }
 
 .site-footer { margin-top: var(--space-3); background: var(--color-surface, #f2f4f8); color: var(--color-muted, #444c5c); border-top: var(--rule, 1px solid #ccd2dc); }
 .site-footer > * { margin: 0; }
