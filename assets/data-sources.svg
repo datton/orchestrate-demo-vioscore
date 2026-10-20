@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-labelledby="t d">
   <title id="t">From alternative data to a score</title>
-  <desc id="d">Three kinds of input, payment history, cash-flow patterns and utility records, feed a model, which produces a score. Conceptual diagram with synthetic examples.</desc>
+  <desc id="d">Three kinds of input, rent payments, utility payments and subscription payments, feed a model, which produces a score. Conceptual diagram with synthetic examples.</desc>
   <rect width="640" height="260" rx="16" fill="#f7f9fb" stroke="#cdd8e3"/>
   <g font-family="system-ui, sans-serif" font-size="15" fill="#0f1b2d">
     <rect x="24" y="30" width="170" height="52" rx="10" fill="#e9eff5" stroke="#0b5cad" stroke-width="2"/>
-    <text x="109" y="62" text-anchor="middle">Payment history</text>
+    <text x="109" y="62" text-anchor="middle">Rent payments</text>
     <rect x="24" y="104" width="170" height="52" rx="10" fill="#e9eff5" stroke="#0b5cad" stroke-width="2"/>
-    <text x="109" y="136" text-anchor="middle">Cash-flow patterns</text>
+    <text x="109" y="136" text-anchor="middle">Utility payments</text>
     <rect x="24" y="178" width="170" height="52" rx="10" fill="#e9eff5" stroke="#0b5cad" stroke-width="2"/>
-    <text x="109" y="210" text-anchor="middle">Utility records</text>
+    <text x="109" y="210" text-anchor="middle">Subscription payments</text>
     <rect x="260" y="80" width="130" height="100" rx="14" fill="#0b1f3a"/>
     <text x="325" y="136" text-anchor="middle" fill="#f7f9fb" font-weight="600">Model</text>
     <rect x="456" y="80" width="160" height="100" rx="14" fill="#5b3fd1"/>
