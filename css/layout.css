@@ -1,0 +1,9 @@
+/* UI/UX: page shell, header, nav and footer layout. */
+body { margin: 0; }
+.skip-link { position: absolute; left: -999px; }
+.skip-link:focus { left: var(--space-1); top: var(--space-1); }
+.site-header, main, .site-footer { max-width: 60rem; margin: 0 auto; padding: var(--space-2); }
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-2); }
+.nav-toggle { display: none; }
+main p, main li { max-width: var(--measure); }
+.site-nav ul[hidden] { display: none; }
