@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="t d">
+  <title id="t">Synthetic score distribution</title>
+  <desc id="d">A bar chart of an invented, synthetic population across five score bands, rising to a peak in the middle band and falling again. Not real data.</desc>
+  <rect width="640" height="340" rx="16" fill="#f7f9fb" stroke="#cdd8e3"/>
+  <text x="32" y="38" font-family="system-ui, sans-serif" font-size="17" font-weight="600" fill="#0f1b2d">Synthetic population by score band</text>
+  <text x="32" y="60" font-family="system-ui, sans-serif" font-size="13" fill="#4a5a6f">Illustrative data generated for this demo. Not real people or firms.</text>
+  <g stroke="#cdd8e3"><line x1="60" y1="270" x2="608" y2="270"/><line x1="60" y1="210" x2="608" y2="210"/><line x1="60" y1="150" x2="608" y2="150"/><line x1="60" y1="90" x2="608" y2="90"/></g>
+  <g fill="#5b3fd1">
+    <rect x="90" y="222" width="72" height="48" rx="4"/>
+    <rect x="198" y="162" width="72" height="108" rx="4"/>
+    <rect x="306" y="96" width="72" height="174" rx="4"/>
+    <rect x="414" y="150" width="72" height="120" rx="4"/>
+    <rect x="522" y="216" width="72" height="54" rx="4"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="13" fill="#0f1b2d" text-anchor="middle">
+    <text x="126" y="292">Band 1</text><text x="234" y="292">Band 2</text><text x="342" y="292">Band 3</text><text x="450" y="292">Band 4</text><text x="558" y="292">Band 5</text>
+    <text x="320" y="324" fill="#4a5a6f">Bars show relative share (synthetic). Lowest band to highest band, left to right.</text>
+  </g>
+</svg>

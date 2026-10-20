@@ -1,13 +1,41 @@
+/* Design tokens for VioScore. Professional fintech look: cool paper, deep navy ink,
+   trustworthy blue links, teal accent, violet used only in art.
+   Contrast (WCAG AA) on --color-bg: text 16.4, muted 6.7, link 6.3, accent 5.8; all also pass on --color-surface.
+   Type: system sans throughout (crisp, neutral); Georgia is not used here. */
 :root {
-  /* Designer: colours, type and spacing tokens live here. */
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-link: #0b4f8a;
-  --color-accent: #b45309;
+  --color-bg: #f7f9fb;
+  --color-surface: #e9eff5;
+  --color-text: #0f1b2d;
+  --color-muted: #4a5a6f;
+  --color-link: #0b5cad;
+  --color-link-hover: #07427c;
+  --color-accent: #0a6e63;
+  --color-accent-strong: #5fd4c0;
+  --color-border: #cdd8e3;
+  --color-header-bg: #0b1f3a;
+  --color-header-text: #f7f9fb;
+  --color-focus: #0b5cad;
+  --color-violet: #5b3fd1;
+
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-heading: Georgia, "Times New Roman", serif;
+  --font-heading: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  /* type scale, ratio ~1.25 */
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --leading-body: 1.65;
+  --leading-heading: 1.2;
+
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 2rem;
+  --space-4: 3rem;
   --measure: 65ch;
+  --radius: 8px;
+  --rule: 1px solid var(--color-border);
 }
