@@ -1,9 +1,47 @@
-/* UI/UX: page shell, header, nav and footer layout. */
-body { margin: 0; }
-.skip-link { position: absolute; left: -999px; }
+/* UI/UX: page shell, header, nav, footer and table layout. Mobile first.
+   Token fallbacks keep the shell readable until the designer's tokens land. */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; overflow-wrap: break-word; }
+
+.skip-link { position: absolute; left: -999px; top: 0; z-index: 10; padding: var(--space-1) var(--space-2); background: var(--color-bg); color: var(--color-link); }
 .skip-link:focus { left: var(--space-1); top: var(--space-1); }
-.site-header, main, .site-footer { max-width: 60rem; margin: 0 auto; padding: var(--space-2); }
-.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-2); }
-.nav-toggle { display: none; }
+
+.site-header, .site-footer { padding: var(--space-2) max(var(--space-2), calc((100% - 60rem) / 2)); }
+main { max-width: 60rem; margin: 0 auto; padding: var(--space-3) var(--space-2); }
+
+.site-header { background: var(--color-header-bg, #14213d); color: var(--color-header-text, #ffffff); border-bottom: 4px solid var(--color-accent-strong, var(--color-accent)); }
+.site-header a { color: inherit; }
+.site-header a:hover { color: var(--color-accent-strong, #ffd166); }
+.site-header a:focus-visible { outline: 3px solid var(--color-accent-strong, #ffd166); outline-offset: 2px; }
+.site-title { margin: 0 0 var(--space-1); font-family: var(--font-heading); font-size: 1.35rem; font-weight: bold; letter-spacing: 0.02em; }
+.site-title a { text-decoration: none; }
+
+/* Three links fit on one line at any phone width, so there is no menu button. */
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 var(--space-2); }
+.site-nav a { display: block; padding: 0.7rem 0.25rem; min-height: 2.75rem; text-decoration: none; border-bottom: 3px solid transparent; }
+.site-nav a:hover { text-decoration: underline; }
+.site-nav a[aria-current="page"] { border-bottom-color: var(--color-accent-strong, #ffd166); }
+
 main p, main li { max-width: var(--measure); }
-.site-nav ul[hidden] { display: none; }
+
+.site-footer { margin-top: var(--space-3); background: var(--color-surface, #f2f4f8); color: var(--color-muted, #444c5c); border-top: var(--rule, 1px solid #ccd2dc); }
+.site-footer > * { margin: 0; }
+.site-footer a { color: var(--color-link); }
+
+/* Tables scroll sideways inside their own box on narrow screens (nav.js adds the wrapper). */
+.table-wrap { max-width: 100%; overflow-x: auto; margin: var(--space-2) 0; border: var(--rule, 1px solid #ccd2dc); border-radius: var(--radius, 4px); }
+.table-wrap:focus-visible { outline: 3px solid var(--color-focus, var(--color-link)); outline-offset: 2px; }
+main table { border-collapse: collapse; width: 100%; min-width: 32rem; font-size: 0.95rem; }
+main caption { text-align: left; padding: var(--space-1) var(--space-2); font-weight: bold; }
+main th, main td { padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; border-bottom: var(--rule, 1px solid #ccd2dc); }
+main thead th { background: var(--color-surface, #f2f4f8); white-space: nowrap; }
+main tbody tr:last-child th, main tbody tr:last-child td { border-bottom: 0; }
+main td.num, main th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+@media (min-width: 48rem) {
+  .site-header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-1) var(--space-3); }
+  .site-title { margin: 0; }
+  main { padding-inline: var(--space-2); }
+}
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
