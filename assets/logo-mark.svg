@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">VioScore mark</title>
+  <desc id="d">A score ring that sweeps from indigo to mint, ending in a coral dot, with a small centre point. Original mark.</desc>
+  <style>
+    .ink{fill:#16152b}.acc{fill:#4b3bd1}.s1{stop-color:#4b3bd1}.s2{stop-color:#9be8cf}.dot{fill:#ff9d7a}.track{stroke:#d9d5ee}
+    @media (prefers-color-scheme: dark){.ink{fill:#fbfaf8}.acc{fill:#a89fff}.s1{stop-color:#8f84ff}.track{stroke:#3a3866}}
+  </style>
+  <defs><linearGradient id="r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="s1"/><stop offset="1" class="s2"/></linearGradient></defs>
+  <circle class="track" cx="32" cy="32" r="22" fill="none" stroke-width="9"/>
+  <path d="M32 10 A22 22 0 1 1 10 32" fill="none" stroke="url(#r)" stroke-width="9" stroke-linecap="round"/>
+  <circle class="dot" cx="10" cy="32" r="5.5"/>
+  <circle class="ink" cx="32" cy="32" r="4"/>
+</svg>
