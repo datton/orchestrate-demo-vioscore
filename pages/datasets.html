@@ -25,7 +25,76 @@
   </header>
   <main id="main">
     <h1>Datasets</h1>
-    <!-- CONTENT: Full-Stack fills this in. Use h2/h3 in order, text only. -->
+    <p class="synthetic-label"><strong>SYNTHETIC DATA.</strong> Every table on this page was invented for illustration. It describes no real person, firm or market, and nothing here is a real-world statistic.</p>
+    <h2>Dataset 1: sample payment histories</h2>
+    <div class="table-wrap" role="region" aria-label="Dataset 1, synthetic payment histories" tabindex="0">
+      <table class="sortable">
+        <caption>SYNTHETIC / illustrative: payments over the last 12 months for eight invented applicants</caption>
+        <thead>
+          <tr><th scope="col">Applicant</th><th scope="col" class="num">Rent paid on time (of 12)</th><th scope="col" class="num">Utilities paid on time (of 12)</th><th scope="col" class="num">Failed subscription payments</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A-001</th><td class="num">12</td><td class="num">12</td><td class="num">0</td></tr>
+          <tr><th scope="row">A-002</th><td class="num">11</td><td class="num">12</td><td class="num">1</td></tr>
+          <tr><th scope="row">A-003</th><td class="num">8</td><td class="num">9</td><td class="num">3</td></tr>
+          <tr><th scope="row">A-004</th><td class="num">12</td><td class="num">10</td><td class="num">0</td></tr>
+          <tr><th scope="row">A-005</th><td class="num">5</td><td class="num">7</td><td class="num">5</td></tr>
+          <tr><th scope="row">A-006</th><td class="num">9</td><td class="num">11</td><td class="num">2</td></tr>
+          <tr><th scope="row">A-007</th><td class="num">12</td><td class="num">6</td><td class="num">1</td></tr>
+          <tr><th scope="row">A-008</th><td class="num">3</td><td class="num">4</td><td class="num">6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>What the columns mean</h3>
+    <ul>
+      <li><strong>Applicant</strong>: an invented identifier, not a real person.</li>
+      <li><strong>Rent paid on time (of 12)</strong>: the number of the last 12 monthly rent payments made on or before the due date.</li>
+      <li><strong>Utilities paid on time (of 12)</strong>: the same measure for utility bills.</li>
+      <li><strong>Failed subscription payments</strong>: how many recurring payments failed in the same 12 months.</li>
+    </ul>
+    <h2>Dataset 2: the toy scoring rule</h2>
+    <div class="table-wrap" role="region" aria-label="Dataset 2, synthetic scoring rule" tabindex="0">
+      <table>
+        <caption>SYNTHETIC / illustrative: points used in the example. These numbers are invented, not estimated from real data.</caption>
+        <thead>
+          <tr><th scope="col">Item</th><th scope="col" class="num">Points</th><th scope="col">Meaning</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Starting score</th><td class="num">500</td><td>Everyone begins here.</td></tr>
+          <tr><th scope="row">Each month of rent paid on time</th><td class="num">+10</td><td>Up to 12 months, so up to +120.</td></tr>
+          <tr><th scope="row">Each month of utilities paid on time</th><td class="num">+5</td><td>Up to 12 months, so up to +60.</td></tr>
+          <tr><th scope="row">Each failed subscription payment</th><td class="num">-8</td><td>Subtracted once per failed payment.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h2>Dataset 3: example scores and bands</h2>
+    <div class="table-wrap" role="region" aria-label="Dataset 3, synthetic example scores" tabindex="0">
+      <table class="sortable">
+        <caption>SYNTHETIC / illustrative: the toy rule applied to Dataset 1</caption>
+        <thead>
+          <tr><th scope="col">Applicant</th><th scope="col" class="num">Rent on time</th><th scope="col" class="num">Utilities on time</th><th scope="col" class="num">Failed subscriptions</th><th scope="col" class="num">Score</th><th scope="col">Band</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">A-001</th><td class="num">12</td><td class="num">12</td><td class="num">0</td><td class="num">680</td><td>Higher</td></tr>
+          <tr><th scope="row">A-002</th><td class="num">11</td><td class="num">12</td><td class="num">1</td><td class="num">662</td><td>Higher</td></tr>
+          <tr><th scope="row">A-003</th><td class="num">8</td><td class="num">9</td><td class="num">3</td><td class="num">601</td><td>Medium</td></tr>
+          <tr><th scope="row">A-004</th><td class="num">12</td><td class="num">10</td><td class="num">0</td><td class="num">670</td><td>Higher</td></tr>
+          <tr><th scope="row">A-005</th><td class="num">5</td><td class="num">7</td><td class="num">5</td><td class="num">545</td><td>Lower</td></tr>
+          <tr><th scope="row">A-006</th><td class="num">9</td><td class="num">11</td><td class="num">2</td><td class="num">629</td><td>Medium</td></tr>
+          <tr><th scope="row">A-007</th><td class="num">12</td><td class="num">6</td><td class="num">1</td><td class="num">642</td><td>Medium</td></tr>
+          <tr><th scope="row">A-008</th><td class="num">3</td><td class="num">4</td><td class="num">6</td><td class="num">502</td><td>Lower</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>How the bands are used in this illustration</h3>
+    <ul>
+      <li><strong>Higher</strong>: a score of 650 or more. In the illustration, a reviewer would still confirm the data.</li>
+      <li><strong>Medium</strong>: 600 to 649. The illustration treats these as cases where a person looks at the full picture.</li>
+      <li><strong>Lower</strong>: below 600. The illustration sends these to human review, and the score is not a decision to decline.</li>
+    </ul>
+    <h2>How these tables fit together</h2>
+    <p>Dataset 1 holds the records, Dataset 2 holds the rule, and Dataset 3 shows the result of applying the rule to the records. Changing the rule or the records changes the scores, which is the point: the output depends on choices people made.</p>
+    <p>The <a href="how-it-works.html">How it works</a> page explains the steps and the cautions. This is a toy example and has not been validated.</p>
   </main>
   <footer class="site-footer">
     <p>VioScore. Illustrative and synthetic. Not a validated or regulated scoring product.</p>
